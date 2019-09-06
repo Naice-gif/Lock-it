@@ -38,9 +38,9 @@ class Testcreds(unittest.TestCase):
       
 
       self.new_credent.save_credentil()
-      test_locking = Credents("Naice","U0788347151*","Instagram" )
-      test_locking.save_locks()
-      self.assertEqual(len(Lock.locker_list),2)   
+      test_crede = Credents("Naice","U0788347151*","Instagram" )
+      test_crede.save_credentil()
+      self.assertEqual(len(Credents.creds_list),2)   
 
 
   def test_find_locker_by_name(self):

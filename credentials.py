@@ -12,7 +12,7 @@ class Credents:
         save_creds method saves credentials objects into creds_list
         '''
 
-        Credents.creds_list.append(self)
+        Credents.credes_list.append(self)
    
   def __init__(self,username,password,account_name):
 

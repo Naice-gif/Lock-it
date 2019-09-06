@@ -1,4 +1,4 @@
-class credents:
+class Credents:
   """
   Class that generates new instances of credents
   """
@@ -9,20 +9,21 @@ class credents:
   def save_creds(self):
 
         '''
-        save_creds method saves contact objects into contact_list
+        save_creds method saves credentials objects into creds_list
         '''
 
-        Lock.locker_list.append(self)
+        Credents.creds_list.append(self)
    
-  def __init__(self,username,password):
+  def __init__(self,username,password,account_name):
 
     #docstring removed for simplicity
 
     self.username = username
     self.password = password
+    self.account_name = account_name
 
-  def delete_Locks(self):
+  def delete_creds(self):
 
         '''
-        delete_contact method deletes a saved contact from the contact_list
+        delete_creds method deletes a saved credentials from the creds_list
         '''

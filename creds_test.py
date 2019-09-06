@@ -43,18 +43,18 @@ class Testcreds(unittest.TestCase):
       self.assertEqual(len(Credents.creds_list),2)   
 
 
-  def test_find_locker_by_name(self):
+  def test_find_credes_by_user(self):
       '''
       test to check if we can find a contact by phone number and display information
       '''
 
-      self.new_locked.save_locks()
-      test_locking = Lock("ThineOrb","U0788347151?")
-      test_locking.save_locks()
+      self.new_credent.save_credentil()
+      test_crede = Credents("Naice","U0788347151*","Instagram" )
+      test_crede.save_credentil()
 
-      found_locked = Lock.find_by_name("ThineOrb")
+      found_creds = Credents.find_by_user("Naice")
 
-      self.assertEqual(found_locked.username,test_locking.username)
+      self.assertEqual(found__creds.username,test_crede.username)
 
 
 if __name__ == '__main__':
